@@ -6,6 +6,7 @@ const router = require("express").Router();
 
 // auth:
 router.use("/auth", require("./authRouter"));
+router.use("/flight", require("./reservationRouter"));
 
 
 module.exports = router;

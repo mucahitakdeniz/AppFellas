@@ -24,6 +24,9 @@ app.use(
   })
 );
 
+// Check Authentication:
+app.use(require("./src/middlewares/authentication"));
+
 //home page
 app.all("/", (req, res) => {
   res.send({
