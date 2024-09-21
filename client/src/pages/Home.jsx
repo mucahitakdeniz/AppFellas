@@ -28,11 +28,11 @@ const Home = () => {
     }}
   >
         <Navbar />
-        <Box sx={{ display: "flex", flexDirection: "row", p: 1,width:"100%",height:"87%" }}>
-          <Box sx={{ flex: 1 }}>
+        <Box sx={{ display: "flex", flexDirection: "row", p: 1,width:"100%",height:"87%", }}>
+          <Box sx={{ flex: 2, }}>
             <Flights />
           </Box>
-          <Box sx={{ width: "14%", ml: "auto" }}>
+          <Box sx={{ width: "14%",  }}>
             <Advertisement />
           </Box>
         </Box>
