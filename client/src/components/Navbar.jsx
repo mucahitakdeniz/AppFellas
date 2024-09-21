@@ -25,7 +25,7 @@ const Navbar = () => {
               marginRight: 1,
             }}
           />
-          <Typography variant="h6" color="black">
+          <Typography variant="h6" color="black" sx={{fontSize:"1rem"}}>
             Plane Scape
           </Typography>
         </Box>
