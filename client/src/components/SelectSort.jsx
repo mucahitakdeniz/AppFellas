@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { FormControl, Select, MenuItem } from "@mui/material";
 
 const SelectSort = () => {
   const [value, setValue] = useState("lowest");

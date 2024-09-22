@@ -85,7 +85,7 @@ const SearchFlight = () => {
           }}
           startAdornment={
             <InputAdornment position="start">
-              <FlightLandIcon
+              <FlightTakeoffIcon
                 className="search-icons"
                 sx={{
                   cursor: "pointer",
@@ -111,7 +111,7 @@ const SearchFlight = () => {
           }}
           startAdornment={
             <InputAdornment position="start">
-              <FlightTakeoffIcon
+              <FlightLandIcon
                 className="search-icons"
                 sx={{
                   cursor: "pointer",

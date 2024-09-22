@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import SearchFlight from "./SearchFlight";
 import FilterPanel from "./FilterPanel";
+import SearchResult from "./SearchResult";
 
 const Flights = () => {
   return (
@@ -26,17 +27,18 @@ const Flights = () => {
           height: "20rem",
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space-between", 
+          justifyContent: "space-between",
         }}
       >
         <Box sx={{ width: "87%" }}>
-          <div>flights</div>
+          <SearchResult />
         </Box>
         <Box
           sx={{
             bgcolor: "rgb(248, 245, 245)",
             width: "20%",
-            marginTop: "2.2rem",p:1
+            marginTop: "2.2rem",
+            p: 1,
           }}
         >
           <FilterPanel />

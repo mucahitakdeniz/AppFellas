@@ -9,7 +9,7 @@ const SmallCheckbox = styled(Checkbox)({
   },
 });
 
-const Checkboxes2 = ({ data, setData }) => {
+const Checkboxes = ({ data, setData }) => {
   const handleChange = (event, index) => {
     const updatedData = data.map((item, i) =>
       i === index ? { ...item, check: !item.check } : item
@@ -53,4 +53,4 @@ const Checkboxes2 = ({ data, setData }) => {
   );
 };
 
-export default Checkboxes2;
+export default Checkboxes;
