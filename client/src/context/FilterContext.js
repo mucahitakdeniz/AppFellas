@@ -24,9 +24,10 @@ export const FilterProvider = ({ children }) => {
     { name: "Qatar Airways", price: "$230", check: false },
     { name: "Air France", price: "$230", check: false },
   ]);
+  const [sortOrder, setSortOrder] = useState("Lowest Price")
 
   return (
-    <FilterContext.Provider value={{ timeState, setTimeState, stops, setStops, airlineState, setAirlineState }}>
+    <FilterContext.Provider value={{ timeState, setTimeState, stops, setStops, airlineState, setAirlineState,sortOrder,setSortOrder }}>
       {children}
     </FilterContext.Provider>
   );

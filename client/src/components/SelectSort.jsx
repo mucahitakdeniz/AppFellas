@@ -1,22 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { FormControl, Select, MenuItem } from "@mui/material";
+import { FilterContext } from "../context/FilterContext";
 
 const SelectSort = () => {
-  const [value, setValue] = useState("lowest");
+  const { sortOrder, setSortOrder } = useContext(FilterContext);
   const handleChange = (event) => {
-    setValue(event.target.value);
+    setSortOrder(event.target.value);
   };
 
   return (
     <FormControl variant="outlined" fullWidth>
       <Select
         labelId="simple-select-label"
-        value={value}
+        value={sortOrder}
         onChange={handleChange}
-        sx={{height:"1.7rem"}}
+        sx={{ height: "1.7rem" }}
       >
-        <MenuItem value="lowest">Lowest price</MenuItem>
-        <MenuItem value="highest">Highest price</MenuItem>
+        <MenuItem value="Lowest Price">Lowest Price</MenuItem>
+        <MenuItem value="Highest Price">Highest Price</MenuItem>
       </Select>
     </FormControl>
   );

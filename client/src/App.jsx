@@ -5,7 +5,8 @@ import "./App.css";
 import AppRouter from "./route/AppRouter";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { FlightDataProvider } from "./context/FlightDataContext";
-import { FilterProvider } from "./context/FilterContext"; // Düzgün adlandırma
+import { FilterProvider } from "./context/FilterContext";
+import { AirportProvider } from "./context/AirportContext";
 
 const theme = createTheme({
   palette: {
@@ -24,13 +25,15 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <FilterProvider> {/* Düzgün yazım */}
-        <FlightDataProvider>
-          <Router>
-            <AppRouter />
-          </Router>
-        </FlightDataProvider>
-      </FilterProvider>
+      <AirportProvider>
+        <FilterProvider>
+          <FlightDataProvider>
+            <Router>
+              <AppRouter />
+            </Router>
+          </FlightDataProvider>
+        </FilterProvider>
+      </AirportProvider>
     </ThemeProvider>
   );
 }

@@ -7,6 +7,10 @@ import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 
 const SearchFlight = () => {
   const [roundTrip, setRoundTrip] = useState(true);
+  const [fromAirport, setFromAirport] = useState("");
+  const [toAirport, setToAirport] = useState("");
+  const [departureDate, setDepartureDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -77,6 +81,8 @@ const SearchFlight = () => {
           size="small"
           color="secondary"
           disableUnderline={true}
+          value={fromAirport}
+          onChange={(e) => setFromAirport(e.target.value)}
           sx={{
             border: 1,
             borderRadius: "16px 0 0 16px",
@@ -103,6 +109,8 @@ const SearchFlight = () => {
           size="small"
           color="secondary"
           disableUnderline={true}
+          value={toAirport}
+          onChange={(e) => setToAirport(e.target.value)}
           sx={{
             border: 1,
             borderRadius: "0 16px 16px 0",
@@ -125,11 +133,12 @@ const SearchFlight = () => {
             </InputAdornment>
           }
         />
-
         <Input
           size="small"
           color="secondary"
           disableUnderline={true}
+          value={departureDate}
+          onChange={(e) => setDepartureDate(e.target.value)}
           sx={{
             border: 1,
             borderRadius: roundTrip ? "16px 0 0 16px" : "16px 16px 16px 16px",
@@ -158,6 +167,8 @@ const SearchFlight = () => {
             size="small"
             color="secondary"
             disableUnderline={true}
+            value={returnDate}
+            onChange={(e) => setReturnDate(e.target.value)}
             sx={{
               border: 1,
               borderRadius: "0 16px 16px 0",

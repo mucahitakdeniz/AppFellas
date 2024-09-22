@@ -1,7 +1,7 @@
 
 import { Box, Typography } from "@mui/material";
 import React, { useContext } from "react";
-import UnstyledSelectIntroduction from "./SelectSort";
+import SelectSort from "./SelectSort";
 import Checkboxes from "./CheckBoxses.jsx";
 import { FilterContext } from "../context/FilterContext.js"; // Ekleyin
 
@@ -20,7 +20,7 @@ const FilterPanel = () => {
       <Typography fontSize="0.75rem" variant="body2" align="left" sx={{ fontWeight: "bold" }}>
         Sort by:
       </Typography>
-      <UnstyledSelectIntroduction />
+      <SelectSort />
       <Typography fontSize="0.75rem" variant="body2" align="left" sx={{ fontWeight: "bold" }}>
         Arrival Time
       </Typography>
