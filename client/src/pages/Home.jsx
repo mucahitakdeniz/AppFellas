@@ -22,8 +22,8 @@ const Home = () => {
       width: "85%",  
       maxWidth: "none", 
       backgroundColor: "rgb(248, 245, 245)",
-      height: "80%",  
-      padding: "20px",
+      minHeight: "80%",  
+      padding: "35px",
       borderRadius: "20px",
     }}
   >
