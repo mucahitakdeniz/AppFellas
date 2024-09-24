@@ -8,7 +8,7 @@ import BeachAccessIcon from "@mui/icons-material/BeachAccess";
 const Advertisement = () => {
   return (
     <Box
-      sx={{ display: "flex", flexDirection: "column", gap: 1, height: "100%" }}
+      sx={{ display: "flex", flexDirection: "column", gap: 1, height: "100%",marginTop:"4rem" }}
     >
       {[
         {
@@ -37,8 +37,8 @@ const Advertisement = () => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
-            width: "24vh",
-            height: "24vh",
+            width: "20vh",
+            height: "20vh",
             borderRadius: "1rem",
             position: "relative",
             cursor: "pointer",

@@ -10,6 +10,7 @@ export const FlightDataProvider = ({ children }) => {
   const API_ID = process.env.REACT_APP_API_ID;
   const API_KEY = process.env.REACT_APP_API_KEY;
   const VERSION = process.env.REACT_APP_VERSION;
+  console.log(URL);
 
   useEffect(() => {
     const getData = async () => {
@@ -20,11 +21,14 @@ export const FlightDataProvider = ({ children }) => {
             app_key: API_KEY,
             ResourceVersion: VERSION,
             Accept: "application/json",
+            
           },
         });
         setFlights(response.data);
+        console.log(response);
       } catch (err) {
         setError(err.message);
+        console.log(err);
       }
     };
 
